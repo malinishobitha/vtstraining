@@ -1,0 +1,120 @@
+* java developer design */
+/* Container for the carousel */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+/* Carousel Images */
+.carousel-inner img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 1s ease-in-out, filter 1s ease;
+ 
+}
+
+/* Add a zoom effect on hover */
+.carousel-inner img:hover {
+  transform: scale(1.1);
+  filter: brightness(0.9);
+}
+
+/* Controls styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Add shadow and border to the carousel */
+.caroselimg {
+  border: 5px solid #f8f9fa;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+/* Add overlay text */
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption h5 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  animation: fadeInUp 1s ease;
+}
+
+/* Keyframes for caption animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* nav bar */
+.nav{
+    background-color:  #FF6347!important;
+}
+.navbar-nav a{
+    color: white!important;
+    font-size: 25px;
+}
+.title{
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color:#003366;
+  margin-top: 10px;
+  text-align: center;
+}
+  .title::after{
+  content: '';
+  background: #ff6600;;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
