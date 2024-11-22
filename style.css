@@ -19,6 +19,8 @@
     line-height: 60px;
     color:#003366;
     margin-top: 10px;
+    font-size: 28px;
+    font-weight: bold;
     text-align: center;
 }
     .title::after{
@@ -132,7 +134,7 @@
 }
 
 .skill-category ul li {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     margin: 0.5rem 0;
     display: flex;
     align-items: center;
@@ -194,7 +196,7 @@
     width: 600px;
     margin: 0 auto;
     border-radius: 10px;
-    overflow: hidden;
+    
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -301,78 +303,37 @@
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
 }
 /* Styling the #keyfeature container */
-#keyfeature {
-    background-color: #ffffff;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 700px;
-    margin: 30px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-  }
-  
 
-  /* Feature list styling */
-  #keyfeature .features-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  #keyfeature .features-list li {
-    font-size: 18px;
-    color: #444;
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-  }
-  
-  /* Icon styling */
-  #keyfeature .features-list i {
-    color: #28a745;
-    margin-right: 10px;
-    font-size: 20px;
-  }
-  
-  /* Hover effect for list items */
-  #keyfeature .features-list li:hover {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    padding: 5px;
-    transition: background-color 0.3s ease;
-  }
  /* certificate */
- .certificate {
-    text-align: center;
+ #certificate {
     padding: 20px;
   }
 
   .certificate title {
-    font-size: 2.5em;
     color: #12126c;
+    font-size: 28px;
+    font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 20px;
   }
 
  
-  .certificate .card {
+  #certificate .card {
     display: flex;
     max-width: 1040px;
     background-color: #12126c;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     margin: 10px;
   }
 
-  .certificate .card img {
+  #certificate .card img {
     height: 310px;
     object-fit: cover;
     margin-top: 5px;
   }
 
-  .certificate .card-body {
+  #certificate .card-body {
     padding: 20px;
     color: #fff;
     display: flex;
@@ -380,7 +341,7 @@
     justify-content: center;
   }
 
-  .certificate.card-text {
+  #certificate.card-text {
     font-size: 1.2em;
     line-height: 1.6;
     margin: 0;
@@ -473,82 +434,64 @@
   .close-icon:hover {
     color: #ff0000;
   }
+  /* keyfeatures */
+ /* styles.css */
 
 
-  /* Animation */
-  @keyframes slideDown {
-    from {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Carousel container */
-
-.animated-carousel {
-  display: flex;
-  animation: scroll 20s linear infinite;  /* Slower speed for smoother scrolling */
-  width: 100%;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+#keyfeatures {
+  padding: 50px 20px;
+  text-align: center;
 }
 
-/* Individual carousel items */
-.carousel-item {
- min-width: 250px;
-  height: 250px;
-  margin: 0 10px;
- 	background-color: rgb(20, 44, 107);
-  color: white;
-  border-radius: 40%;
-  box-shadow: 0 4px 10px rgba(53, 53, 53, 0.1);
-  text-align: center;
+.features {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  gap: 20px;
+}
+
+.feature-box {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  padding: 5px;
-  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.carousel-item i {
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
   font-size: 3rem;
+  margin-bottom: 15px;
+  color: #007BFF;
+}
+
+.feature-box h2 {
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  animation: pulse 2s infinite;
+  color: #0056b3;
 }
 
-.carousel-item:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+.feature-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
 }
 
-/* Smooth scrolling animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);  /* Start position */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
   }
-  100% {
-    transform: translateX(-100%); /* End position */
+
+  .feature-box {
+    width: 90%;
   }
 }
-
-/* Pulse animation for icons */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
-
-
 
 
 
@@ -563,6 +506,79 @@
 .carousel-container{
   width: 90%;
   margin: auto;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.carousel-wrapper {
+  overflow: hidden; /* Hide the overflowing content */
+  width: 100%;
+  position: relative;
+}
+
+.animated-carousel {
+  display: flex;
+  animation: scroll 20s linear infinite; /* Continuous scroll animation */
+  width: calc(9 * 270px); /* Adjust based on the total number of items */
+}
+
+.carousel-item {
+  min-width: 250px;
+  height: 250px;
+  margin: 0 10px;
+  background-color: rgb(20, 44, 107);
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(53, 53, 53, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carousel-item i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  animation: pulse 2s infinite; /* Icon animation */
+}
+.carousel-item h3{
+  font-size: 1rem;
+}
+.carousel-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-7 * 270px)); /* Move by the width of all original items */
+  }
+}
+
+/* Pulse animation for icons */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 
